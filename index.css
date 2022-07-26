@@ -16,11 +16,78 @@ main {
 }
 
 /* solution styles */
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,.2);
+  height: 100px;
+  width: 100%;
+}
 
+.menu-icon {
+  cursor: pointer;
+  margin-left: 1.5rem;
+  z-index: 999;
+}
 
+.bar1,
+.bar2,
+.bar3 {
+  background-color: white;
+  margin: 6px 0;
+  width: 30px;
+  height: 2px;
+  transition: 0.4s;
+}
 
-/* open state */
+.site-title {
+  font-size: 200%;
+  color: white;
+  margin-right: 1.5rem;
+}
 
+nav {
+  background-color:#232123;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  width: 200px;
+  z-index: 99;
+  transition: 0.4s;
+}
 
+.nav-menu {
+  font-size: 1.3rem;
+  margin-top: 90px;
+  margin-left: 20px;
+}
+
+.nav-menu li {
+  margin-bottom: 5px;
+}
+
+.nav-menu a {
+  color: white;
+}
 
 /* transitions */
+.show {
+  left: 0;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 4.5px);
+  transform: rotate(-45deg) translate(-6px, 4.5px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6.5px, -6.5px);
+  transform: rotate(45deg) translate(-6.5px, -6.5px);
+}
