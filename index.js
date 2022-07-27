@@ -1,14 +1,12 @@
-const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+const emailRegex = /^([A-Za-z\d\.-]+)@([A-Za-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
 
-const input = document.querySelector('input');
-const tick = document.querySelector('.material-icons.tick');
+const emailInput = document.querySelector('#email');
+const tick = document.querySelector('.tick');
 
-input.addEventListener('keyup', () => {
-    if (emailRegex.test(input.value)) {
-        input.className = "valid";
-        tick.classList.add("valid");
+emailInput.addEventListener('keyup', (e) => {
+    if (emailRegex.test(e.target.value)) {
+        e.target.closest(".field").classList.add("valid");
     } else {
-        input.className = "invalid";
-        tick.classList.remove("valid");
+        e.target.closest(".field").classList.remove("valid");
     }
 });
