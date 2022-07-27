@@ -23,6 +23,19 @@ form input {
   border: 2px solid #777;
   border-radius: 4px;
   padding: 4px;
+  outline: none;
 }
 
 /* solution styles */
+form .material-icons.tick {
+  color: green;
+  opacity: 0;
+}
+
+form input.valid {
+  border-color: green;
+}
+
+form .material-icons.tick.valid {
+  opacity: 1;
+}
